@@ -1,0 +1,632 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../site/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../site/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../site/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../site/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../site/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../site/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../site/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../site/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../site/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 17, ../sass/screen.scss */
+html {
+  min-height: 100%;
+  /* make sure it is at least as tall as the viewport */
+  position: relative;
+}
+
+/* line 21, ../sass/screen.scss */
+body {
+  color: #000000;
+  height: 100vh;
+  font-family: letter-gothic-std, monospace;
+  font-style: normal;
+  font-weight: 400;
+  overflow-y: hidden;
+}
+
+@media only screen and (max-width: 960px) {
+  /* line 31, ../sass/screen.scss */
+  body {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+}
+/* line 36, ../sass/screen.scss */
+.flex-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  border-style: solid;
+  border-width: thin;
+  border-color: #b4b4b4;
+  margin: 1% 1%;
+  padding: 15px 15px;
+  text-align: center;
+}
+
+/* line 48, ../sass/screen.scss */
+.row-flex {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  height: 40vh;
+}
+
+/* line 54, ../sass/screen.scss */
+nav {
+  width: 100%;
+  text-align: center;
+  padding: 25px 0px 25px 15px;
+}
+/* line 58, ../sass/screen.scss */
+nav a {
+  font-family: letter-gothic-std, monospace;
+  font-weight: 200;
+  color: #b4b4b4;
+  font-size: 17px;
+  text-decoration: none;
+  border-color: #b4b4b4;
+  border-style: solid;
+  border-width: 2px;
+  border-top: none;
+  border-bottom: none;
+  padding: 0px 10px;
+}
+/* line 71, ../sass/screen.scss */
+nav a:hover {
+  color: #F599C4;
+  border-color: #F599C4;
+}
+
+/* line 78, ../sass/screen.scss */
+footer {
+  margin-left: 1%;
+  margin-right: 1%;
+  font-size: 12px;
+}
+
+/* line 84, ../sass/screen.scss */
+#stanga {
+  width: 50%;
+  float: left;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+/* line 93, ../sass/screen.scss */
+#dreapta {
+  width: 50%;
+  float: left;
+}
+
+/* line 99, ../sass/screen.scss */
+.coloana-stanga, .coloana-dreapta, .coloana-dreapta2, .coloana-stanga2 {
+  position: relative;
+  float: left;
+  width: 50%;
+  text-align: center;
+  -webkit-transition: background-color .2s ease;
+  -moz-transition: background-color .2s ease;
+  transition: background-color .2s ease;
+}
+
+/* line 108, ../sass/screen.scss */
+.coloana-dreapta, .coloana-stanga2 {
+  background-color: #7FD0D7;
+}
+
+/* line 112, ../sass/screen.scss */
+.coloana-dreapta:hover, .coloana-stanga2:hover {
+  background-color: #2AD6CD;
+  -webkit-transition: background-color .2s ease;
+  -moz-transition: background-color .2s ease;
+  transition: background-color .2s ease;
+}
+
+/* line 118, ../sass/screen.scss */
+.coloana-stanga, .coloana-dreapta2 {
+  background-color: #2AD6CD;
+}
+
+/* line 121, ../sass/screen.scss */
+.coloana-dreapta2:hover {
+  cursor: pointer;
+  cursor: hand;
+}
+
+/* line 125, ../sass/screen.scss */
+.coloana-stanga:hover, .input-email:hover {
+  background-color: #7FD0D7;
+  -webkit-transition: background-color .2s ease;
+  -moz-transition: background-color .2s ease;
+  transition: background-color .2s ease;
+}
+
+/* line 131, ../sass/screen.scss */
+.success {
+  padding: 1em;
+  color: #000000;
+  background-color: #2AD6CD;
+}
+
+/* line 138, ../sass/screen.scss */
+.error {
+  padding: 1em;
+  color: #000000;
+  background-color: #FF9F9F;
+}
+
+/* line 145, ../sass/screen.scss */
+.input-email, .input-name, .input-message, .input-buton {
+  font-family: letter-gothic-std, monospace;
+  height: auto;
+  padding: 10% 10%;
+  border: 0;
+  text-align: center;
+  margin: 0;
+  color: #FFF;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* line 161, ../sass/screen.scss */
+.coloana-dreapta2:hover, .input-buton:hover {
+  cursor: pointer;
+  cursor: hand;
+  background-color: #FF9F9F;
+}
+
+/* line 166, ../sass/screen.scss */
+.input-email, .input-buton {
+  background-color: #2AD6CD;
+}
+
+/* line 169, ../sass/screen.scss */
+.input-name, .input-message {
+  background-color: #7FD0D7;
+}
+
+/* line 172, ../sass/screen.scss */
+.input-message {
+  position: static;
+  resize: none;
+  color: white;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+  font-size: 10px;
+  height: 80px;
+}
+
+/* line 182, ../sass/screen.scss */
+.copyright {
+  float: left;
+  text-align: left;
+  width: 50%;
+}
+
+/* line 187, ../sass/screen.scss */
+.social {
+  float: right;
+  width: 50%;
+  text-align: right;
+}
+/* line 191, ../sass/screen.scss */
+.social a {
+  text-decoration: none;
+  color: #7FD0D7;
+  font-size: 16px;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+/* line 198, ../sass/screen.scss */
+.social a:hover {
+  color: #FF9F9F;
+}
+/* line 201, ../sass/screen.scss */
+.social a:focus {
+  color: #FF9F9F;
+  font-size: 22px;
+}
+/* line 205, ../sass/screen.scss */
+.social a:visited {
+  color: #7FD0D7;
+}
+
+/* line 209, ../sass/screen.scss */
+#back-to-top {
+  cursor: pointer;
+  position: fixed;
+  bottom: 10px;
+  right: 2px;
+  display: none;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: none !important;
+  background: none !important;
+  border-image: none;
+  padding: 16px 16px !important;
+  border-style: none;
+  color: #b4b4b4;
+  font-size: 45px;
+}
+
+/* line 227, ../sass/screen.scss */
+.logo {
+  text-align: center;
+  width: 100%;
+  margin-top: -16px;
+  padding-left: 15px;
+}
+/* line 232, ../sass/screen.scss */
+.logo .logo-class {
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  background-image: url("../../img/logo.png");
+  width: 100px;
+  height: 100px;
+}
+
+/* line 243, ../sass/screen.scss */
+.proiecte {
+  width: 100%;
+  padding-left: 15px;
+}
+/* line 246, ../sass/screen.scss */
+.proiecte li {
+  margin: 20px 0px;
+}
+/* line 249, ../sass/screen.scss */
+.proiecte li a {
+  border-color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-top: none;
+  border-bottom: none;
+  filter: gray;
+  /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+  /* Chrome*/
+}
+/* line 259, ../sass/screen.scss */
+.proiecte li a:hover {
+  border-color: #FF9F9F;
+  filter: none;
+  -webkit-filter: none;
+}
+/* line 265, ../sass/screen.scss */
+.proiecte li .box1, .proiecte li .box2, .proiecte li .box3, .proiecte li .box4 {
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  width: 210px;
+  height: 67px;
+}
+/* line 272, ../sass/screen.scss */
+.proiecte li .box1 {
+  background-image: url("../../img/eugen-goriac.png");
+}
+/* line 276, ../sass/screen.scss */
+.proiecte li .box2 {
+  background-image: url("../../img/arhitext.png");
+}
+/* line 280, ../sass/screen.scss */
+.proiecte li .box3 {
+  background-image: url("../../img/dent-it-clinica.jpg");
+}
+/* line 283, ../sass/screen.scss */
+.proiecte li .box4 {
+  background-image: url("../../img/urbaniac.jpg");
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media (max-width: 600px) {
+  /* Styles */
+  /* line 293, ../sass/screen.scss */
+  .flex-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  /* line 306, ../sass/screen.scss */
+  .row-flex {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    height: 61vh;
+    flex-wrap: wrap;
+  }
+
+  /* line 314, ../sass/screen.scss */
+  #stanga {
+    width: 100%;
+    float: left;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+  }
+
+  /* line 323, ../sass/screen.scss */
+  #dreapta {
+    width: 100%;
+    float: left;
+  }
+
+  /* line 328, ../sass/screen.scss */
+  .coloana-stanga, .coloana-dreapta, .coloana-dreapta2, .coloana-stanga2 {
+    width: 100%;
+  }
+
+  /* line 331, ../sass/screen.scss */
+  .input-message, .coloana-stanga2 {
+    background-color: #2AD6CD;
+  }
+
+  /* line 334, ../sass/screen.scss */
+  .input-message {
+    text-align: justify;
+    line-height: 16px;
+    height: 120px;
+  }
+
+  /* line 340, ../sass/screen.scss */
+  .input-buton, .coloana-dreapta2 {
+    background-color: #FF9F9F;
+    border-radius: 0 !important;
+    height: 80px;
+  }
+
+  /* line 345, ../sass/screen.scss */
+  .input-buton {
+    font-weight: 800;
+    height: 80px;
+  }
+
+  /* line 349, ../sass/screen.scss */
+  .proiecte, nav, .logo {
+    padding-left: 0px;
+  }
+
+  /* line 353, ../sass/screen.scss */
+  nav {
+    margin-top: 20px;
+  }
+  /* line 355, ../sass/screen.scss */
+  nav a {
+    font-size: 17px !important;
+    font-weight: 800;
+  }
+
+  /* line 361, ../sass/screen.scss */
+  .proiecte .box1, .proiecte .box2, .proiecte .box3, .proiecte .box4 {
+    width: 210px;
+    height: 67px;
+  }
+
+  /* line 370, ../sass/screen.scss */
+  footer .copyright, footer .social {
+    float: left;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  /* line 377, ../sass/screen.scss */
+  footer .social a {
+    font-size: 24px;
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+}
+/* iphone 5 Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  /* line 393, ../sass/screen.scss */
+  .row-flex {
+    height: auto;
+  }
+
+  /* line 396, ../sass/screen.scss */
+  .input-buton {
+    height: auto;
+    padding: 6% 45%;
+  }
+
+  /* line 400, ../sass/screen.scss */
+  .input-message {
+    padding: 3% 1%;
+    text-align: justify;
+  }
+
+  /* line 406, ../sass/screen.scss */
+  .proiecte li {
+    margin: 10px 0px;
+  }
+  /* line 410, ../sass/screen.scss */
+  .proiecte li .box1, .proiecte li .box2, .proiecte li .box3, .proiecte li .box4 {
+    width: 180px;
+    height: 57px;
+  }
+}
+/* Tablets (portrait and landscape) ----------- */
+@media (min-width: 601px) and (max-width: 1024px) {
+  /* line 423, ../sass/screen.scss */
+  .input-message {
+    padding: 3% 1%;
+    text-align: justify;
+  }
+
+  /* line 429, ../sass/screen.scss */
+  .proiecte li {
+    margin: 10px 0px;
+  }
+  /* line 433, ../sass/screen.scss */
+  .proiecte li .box1, .proiecte li .box2, .proiecte li .box3, .proiecte li .box4 {
+    width: 180px;
+    height: 57px;
+  }
+
+  /* line 443, ../sass/screen.scss */
+  .logo .logo-class {
+    width: 80px;
+    height: 80px;
+  }
+}
+/* ----------- Large screens ----------- */
+@media screen and (min-width: 1400px) {
+  /* line 452, ../sass/screen.scss */
+  .flex-container {
+    margin: 2% 5%;
+  }
+
+  /* line 455, ../sass/screen.scss */
+  .logo-class {
+    width: 120px !important;
+    height: 119px !important;
+  }
+
+  /* line 459, ../sass/screen.scss */
+  nav {
+    margin-top: 15px;
+  }
+  /* line 461, ../sass/screen.scss */
+  nav a {
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  /* line 468, ../sass/screen.scss */
+  footer .copyright {
+    text-align: right;
+  }
+  /* line 472, ../sass/screen.scss */
+  footer .social {
+    float: left;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1600px) {
+  /* line 481, ../sass/screen.scss */
+  .flex-container {
+    margin: 2% 5%;
+  }
+
+  /* line 484, ../sass/screen.scss */
+  nav {
+    margin-top: 45px;
+  }
+  /* line 486, ../sass/screen.scss */
+  nav a {
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  /* line 492, ../sass/screen.scss */
+  .proiecte li {
+    margin: 30px 0px;
+  }
+  /* line 494, ../sass/screen.scss */
+  .proiecte li a {
+    border-width: 4px;
+  }
+  /* line 500, ../sass/screen.scss */
+  .proiecte .box1, .proiecte .box2, .proiecte .box3, .proiecte .box4 {
+    width: 210px !important;
+    height: 67px !important;
+  }
+
+  /* line 506, ../sass/screen.scss */
+  footer .copyright {
+    text-align: right;
+  }
+  /* line 509, ../sass/screen.scss */
+  footer .social {
+    float: left;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1900px) {
+  /* line 518, ../sass/screen.scss */
+  .flex-container {
+    margin: 2% 5%;
+  }
+
+  /* line 521, ../sass/screen.scss */
+  .logo-class {
+    width: 190px !important;
+    height: 190px !important;
+  }
+}

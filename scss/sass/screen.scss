@@ -1,0 +1,527 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+$primary-color: #000000;
+$big-column: #7FD0D7;
+$big-column-second: #2AD6CD;
+$circle-small: #FF9F9F;
+$circle-big: #F599C4;
+$white-font: #FFF;
+$border: #b4b4b4;
+$margin: 1%;
+
+html {
+    min-height:100%;/* make sure it is at least as tall as the viewport */
+    position:relative;
+}
+body {
+  
+  color: $primary-color;
+  height:100vh;
+  font-family: letter-gothic-std, monospace;
+  font-style: normal;
+  font-weight: 400;
+  overflow-y:hidden;
+}
+@media only screen and (max-width:960px){
+    body{
+        overflow-y:scroll;
+		scroll-behavior: smooth;
+    }
+}
+.flex-container {
+    display: -webkit-flex;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    border-style:solid;
+	border-width:thin;
+	border-color: $border;
+	margin: $margin $margin;
+	padding: 15px 15px;
+	text-align: center;
+}
+.row-flex {
+	display: -webkit-flex;
+    display: flex; 
+	flex-direction: row;
+	height:40vh;
+}
+nav{
+	width:100%;
+	text-align: center;
+	padding: 25px 0px 25px 15px;
+	a {
+		font-family: letter-gothic-std, monospace;
+		font-weight: 200;
+		color:$border;
+		font-size: 17px;
+		text-decoration: none;
+		border-color: $border;
+		border-style: solid;
+		border-width: 2px;
+		border-top:none;
+		border-bottom:none;
+		padding: 0px 10px;
+	}
+	a:hover {
+		color: $circle-big;
+		border-color: $circle-big;
+		
+	}
+}
+
+footer{
+	margin-left: $margin;
+	margin-right: $margin;
+	font-size: 12px;
+}
+
+#stanga{
+	width:50%;
+	float:left;
+	top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:hidden;
+}
+#dreapta{
+	width:50%;
+	float:left;
+	
+}
+//forma
+.coloana-stanga,.coloana-dreapta, .coloana-dreapta2,.coloana-stanga2 {
+    position: relative;
+    float: left;
+    width: 50%;
+    text-align: center;
+    -webkit-transition: background-color .2s ease;
+    -moz-transition: background-color .2s ease;
+    transition: background-color .2s ease;
+}
+.coloana-dreapta,.coloana-stanga2 {
+    background-color: $big-column;
+
+}
+.coloana-dreapta:hover,.coloana-stanga2:hover {
+    background-color: $big-column-second;
+	-webkit-transition: background-color .2s ease;
+    -moz-transition: background-color .2s ease;
+    transition: background-color .2s ease;
+}
+.coloana-stanga, .coloana-dreapta2 {
+	background-color: $big-column-second;
+}
+.coloana-dreapta2:hover { 
+	cursor: pointer;
+	cursor: hand;
+}
+.coloana-stanga:hover, .input-email:hover {
+	background-color: $big-column;
+	-webkit-transition: background-color .2s ease;
+    -moz-transition: background-color .2s ease;
+    transition: background-color .2s ease;
+}
+.success {
+  padding: 1em;
+  color: $primary-color;
+  background-color: $big-column-second;
+  
+}
+
+.error {
+  padding: 1em;
+  color: $primary-color;
+  background-color: $circle-small;
+  
+}
+
+ .input-email, .input-name, .input-message,.input-buton {
+	font-family: letter-gothic-std, monospace;
+	height: auto;
+   padding: 10% 10%;
+    border: 0;
+    text-align: center;
+    margin: 0;
+	color: $white-font;
+	-webkit-appearance: none;
+   -moz-appearance: none;
+    appearance: none;
+}
+
+.input-buton {
+	
+ }
+ .coloana-dreapta2:hover,.input-buton:hover {
+	cursor: pointer;
+	cursor: hand;
+	background-color: $circle-small;
+}
+ .input-email,.input-buton {
+	background-color: $big-column-second;
+ }
+ .input-name, .input-message {
+	background-color: $big-column;
+ }
+ .input-message {
+    position: static;
+	resize: none;
+    color:white;
+	overflow-x: hidden!important;
+	overflow-y: hidden!important;
+	font-size: 10px;
+	height: 80px;
+ }
+ /////////////////////////////////footer
+ .copyright{
+	float:left;
+	text-align:left;
+	width:50%;
+ }
+ .social{
+	float:right;
+	width:50%;
+	text-align:right;
+	a{
+		text-decoration:none;
+		color:$big-column;
+		font-size: 16px;
+		margin-right: 8px;
+		margin-left: 8px;
+	}
+	a:hover {
+		color:$circle-small;
+	}
+	a:focus {
+		color:$circle-small;
+		font-size: 22px;
+	}
+	a:visited {
+		color:$big-column;
+	}
+ }
+  #back-to-top {
+	  cursor: pointer;
+	  position: fixed;
+	  bottom: 10px;
+	  right: 2px;
+	  display: none;
+	  -webkit-appearance: none!important;
+	   -moz-appearance: none!important;
+		appearance: none!important;
+		background: none!important;
+		background: none!important;
+		border-image: none;
+		padding: 16px 16px!important;
+		border-style: none;
+		color: $border;
+		font-size: 45px;
+	}
+//dreapta
+ .logo{
+	text-align:center;
+	width:100%;
+	margin-top: -16px;
+	padding-left: 15px;
+	.logo-class {
+			background-repeat:no-repeat;
+			background-size: contain;
+			display: inline-block;
+			background-image: url("../../img/logo.png");
+			width: 100px;	
+			height: 100px;
+			
+		}
+ }
+
+ .proiecte{
+	width: 100%;
+    padding-left: 15px;
+	li{
+		margin:20px 0px;
+		
+		a{
+			border-color:white;
+			border-style: solid;
+			border-width: 2px;
+			border-top:none;
+			border-bottom:none;
+			filter: gray; /* IE6-9 */
+			-webkit-filter: grayscale(100%); /* Chrome*/
+				
+		}
+		a:hover {
+			border-color:$circle-small;
+				filter: none;
+				-webkit-filter: none;
+			
+		}
+		.box1, .box2, .box3, .box4 {
+			background-repeat:no-repeat;
+			background-size: contain;
+			display: inline-block;
+			width: 210px;
+			height: 67px;
+		}
+		.box1{
+			background-image: url("../../img/eugen-goriac.png");
+						
+		}
+		.box2{
+			background-image: url("../../img/arhitext.png");
+						
+		}
+		.box3{
+			background-image: url("../../img/dent-it-clinica.jpg");
+						
+		}.box4{
+			background-image: url("../../img/urbaniac.jpg");
+						
+		}
+		
+	}
+ }
+  /* Smartphones (portrait and landscape) ----------- */
+@media (max-width: 600px) {
+/* Styles */
+	.flex-container{
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+	
+	}
+	
+	.row-flex {
+	display: -webkit-flex;
+    display: flex; 
+	flex-direction: row;
+	height: 61vh;
+	flex-wrap: wrap;
+}
+	
+	#stanga{
+		width:100%;
+		float:left;
+		top:0;
+		bottom:0;
+		left:0;
+		right:0;
+		overflow:hidden;
+	}
+	#dreapta{
+		width:100%;
+		float:left;
+	
+	}
+	.coloana-stanga, .coloana-dreapta, .coloana-dreapta2, .coloana-stanga2 {
+		width:100%;
+	}
+	.input-message, .coloana-stanga2 {
+		background-color: $big-column-second;
+}
+	.input-message {
+		text-align: justify;
+		line-height: 16px;
+		height: 120px;
+	}
+	
+	.input-buton, .coloana-dreapta2 {
+		background-color: $circle-small;
+		border-radius: 0!important;
+		height: 80px;
+	}
+	.input-buton {
+		font-weight: 800;
+		height: 80px;
+	}
+	.proiecte, nav, .logo {
+		padding-left: 0px;
+	}
+	
+	nav {
+		margin-top: 20px;
+		a {
+			font-size: 17px!important;
+			font-weight: 800;
+		}
+	}
+	.proiecte {
+		.box1, .box2, .box3, .box4 {
+			width: 210px;
+			height: 67px;
+		}
+	}
+	
+	
+footer {
+		
+		.copyright, .social {
+			float:left;
+			text-align:center;
+			width:100%;
+			margin-bottom: 20px;
+		}
+		.social {
+			a {
+				font-size: 24px;
+				margin-right: 16px;
+				margin-left: 16px;
+			}
+		}
+		
+	}
+}
+
+/* iphone 5 Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+	.row-flex {
+		height: auto;
+	}
+	.input-buton {
+		height: auto;
+		padding: 6% 45%;
+	}
+	.input-message {
+		padding: 3% 1%;
+		text-align: justify;
+	}
+	.proiecte{
+	
+		li{
+			margin:10px 0px;
+				
+			
+			.box1, .box2, .box3, .box4 {
+				
+				width: 180px;
+				height: 57px;
+			}
+			
+			
+		}
+	}
+}
+/* Tablets (portrait and landscape) ----------- */
+@media (min-width: 601px) and (max-width: 1024px) {
+	
+	.input-message {
+		padding: 3% 1%;
+		text-align: justify;
+	}
+	.proiecte{
+		
+			li{
+				margin:10px 0px;
+					
+				
+				.box1, .box2, .box3, .box4 {
+					
+					width: 180px;
+					height: 57px;
+				}
+				
+				
+			}
+		}
+	.logo{
+		.logo-class {
+			width: 80px;	
+			height: 80px;
+		}
+ }
+}
+/* ----------- Large screens ----------- */
+
+@media screen and (min-width: 1400px) {
+  .flex-container {
+	margin: 2% 5%;
+  }
+  .logo-class {
+			width: 120px!important;	
+			height: 119px!important;
+	}
+  nav{
+	margin-top: 15px;
+		a {
+			font-size: 20px;
+			font-weight: 800;
+		}
+  }
+  
+  footer {
+		.copyright{
+			text-align:right;
+			//margin-top: 20px;
+		}
+		.social {
+			float:left;
+			text-align:left;
+			//margin-top: 20px;
+		}
+		
+	}
+}
+@media screen and (min-width: 1600px) {
+  .flex-container {
+	margin: 2% 5%;
+  }
+  nav{
+	margin-top: 45px;
+		a {
+			font-size: 20px;
+			font-weight: 800;
+		}
+  }
+  .proiecte{
+	li{
+		margin:30px 0px;
+		a {
+			border-width: 4px;
+			
+		}
+	}
+	
+    .box1, .box2, .box3, .box4 {
+			width: 210px!important;
+			height: 67px!important;
+		}
+	}
+  footer {
+		.copyright{
+			text-align:right;
+		}
+		.social {
+			float:left;
+			text-align:left;
+			
+		}
+		
+	}
+}
+@media screen and (min-width: 1900px) {
+  .flex-container {
+	margin: 2% 5%;
+  }
+  .logo-class {
+			width: 190px!important;	
+			height: 190px!important;
+	}
+	
+	
+}
